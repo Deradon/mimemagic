@@ -1,6 +1,6 @@
 # -*- coding: binary -*-
 # frozen_string_literal: true
-# Generated from freedesktop.org.xml
+# Generated from https://gitlab.freedesktop.org/xdg/shared-mime-info/-/raw/2.1/data/freedesktop.org.xml.in
 class MimeMagic
   # @private
   # :nodoc:
@@ -2056,8 +2056,8 @@ class MimeMagic
     ['image/x-olympus-orf', [[0, "IIRO\b\000\000\000"]]],
     ['image/x-panasonic-rw', [[0, "IIU\000\b\000\000\000"]]],
     ['image/x-panasonic-rw2', [[0, "IIU\000\030\000\000\000"]]],
-    ['image/x-pict', [[10, "\000\021", [[12, "\002\377", [[14, "\f\000", [[16, "\377\376"]]]]]]]]],
     ['image/x-pict', [[522, "\000\021", [[524, "\002\377", [[526, "\f\000", [[528, "\377\376"]]]]]]]]],
+    ['image/x-pict', [[10, "\000\021", [[12, "\002\377", [[14, "\f\000", [[16, "\377\376"]]]]]]]]],
     ['image/x-portable-bitmap', [[0, 'P1', [[2, "\n"], [2, ' '], [2, "\t"], [2, "\r"]]], [0, 'P4', [[2, "\n"], [2, ' '], [2, "\t"], [2, "\r"]]]]],
     ['image/x-portable-graymap', [[0, 'P2', [[2, "\n"], [2, ' '], [2, "\t"], [2, "\r"]]], [0, 'P5', [[2, "\n"], [2, ' '], [2, "\t"], [2, "\r"]]]]],
     ['image/x-portable-pixmap', [[0, 'P3', [[2, "\n"], [2, ' '], [2, "\t"], [2, "\r"]]], [0, 'P6', [[2, "\n"], [2, ' '], [2, "\t"], [2, "\r"]]]]],
@@ -2099,10 +2099,10 @@ class MimeMagic
     ['text/x-makefile', [[0, '#!/usr/bin/make'], [0, '#! /usr/bin/make']]],
     ['text/x-matlab', [[0, 'function']]],
     ['text/x-microdvd', [[0, '{1}'], [0, '{0}'], [0..6, '}{']]],
-    ['text/x-modelica', [[0, 'function']]],
     ['text/x-modelica', [[0, 'class']]],
     ['text/x-modelica', [[0, 'model']]],
     ['text/x-modelica', [[0, 'record']]],
+    ['text/x-modelica', [[0, 'function']]],
     ['text/x-mpsub', [[0..256, 'FORMAT=']]],
     ['text/x-mrml', [[0, '<mrml ']]],
     ['text/x-ms-regedit', [[0, 'REGEDIT'], [0, 'Windows Registry Editor Version 5.00'], [0, "\377\376W\000i\000n\000d\000o\000w\000s\000 \000R\000e\000g\000i\000s\000t\000r\000y\000 \000E\000d\000i\000t\000o\000r\000"]]],
@@ -2146,8 +2146,8 @@ class MimeMagic
     ['text/x-objcsrc', [[0, '#import']]],
     ['application/mbox', [[0, 'From ']]],
     ['image/x-tga', [[1, "\001\001"], [1, "\001\t"], [1, "\000\003"], [1, "\000\n"], [1, "\000\v"]]],
-    ['text/x-matlab', [[0, '%']]],
     ['text/x-matlab', [[0, '##']]],
+    ['text/x-matlab', [[0, '%']]],
     ['text/x-modelica', [[0, '//']]],
     ['text/x-tex', [[0, '%']]],
   ]

@@ -9,8 +9,11 @@ Rake::TestTask.new do |t|
 end
 
 desc 'Generate mime tables'
-task :tables => 'lib/mimemagic/tables.rb'
-file 'lib/mimemagic/tables.rb' => FileList['script/freedesktop.org.xml'] do |f|
-  sh "script/generate-mime.rb #{f.prerequisites.join(' ')} > #{f.name}"
+task :tables do
+  if ENV["RELEASE"]
+    source_url = "https://gitlab.freedesktop.org/xdg/shared-mime-info/-/raw/#{ENV['RELEASE']}/data/freedesktop.org.xml.in"
+    sh "script/generate-mime.rb '#{source_url}' > lib/mimemagic/tables.rb"
+  else
+    sh "script/generate-mime.rb > lib/mimemagic/tables.rb"
+  end
 end
-

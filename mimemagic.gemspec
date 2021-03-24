@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency('minitest', '~> 5.14')
   s.add_development_dependency('rake', '~> 13.0')
+  s.add_development_dependency('nokogiri')
 
   if s.respond_to?(:metadata)
     s.metadata['changelog_uri'] = "https://github.com/minad/mimemagic/blob/master/CHANGELOG.md"

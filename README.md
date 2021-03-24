@@ -25,10 +25,28 @@ http://www.rubydoc.info/github/minad/mimemagic
 Tests
 =====
 
-```
+```shell
 bundle install
 
 rake test
+```
+
+Contribution
+===========
+
+Update mimemagic table data
+---------------------------
+
+The following rake task will fetch the latest (or speficic release) data from
+the [shared-mime-info](https://gitlab.freedesktop.org/xdg/shared-mime-info) project
+and rebuilds the `mimemagic/table` data.
+
+```shell
+# Build table w/ most recent data
+rake tables
+
+# Build tables for specific `shared-mime-info` release
+rake tables RELEASE="2.1"
 ```
 
 Authors

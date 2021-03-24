@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'nokogiri'
+require 'net/http'
 
 class String
   alias inspect_old inspect
@@ -59,14 +60,12 @@ def get_matches(parent)
   }.compact
 end
 
-if ARGV.size != 1
-  puts "Usage: #{$0} <freedesktop.org.xml>"
-  exit 1
-end
+DEFAULT_SOURCE_URL = "https://gitlab.freedesktop.org/xdg/shared-mime-info/-/raw/master/data/freedesktop.org.xml.in"
+SOURCE_URL = ARGV[0] || DEFAULT_SOURCE_URL
 
-FILE = ARGV[0]
-file = File.new(FILE)
-doc = Nokogiri::XML(file)
+
+content = Net::HTTP.get(URI(SOURCE_URL))
+doc = Nokogiri::XML(content)
 extensions = {}
 types = {}
 magics = []
@@ -134,7 +133,7 @@ magics = (common_magics.compact + magics).uniq
 
 puts "# -*- coding: binary -*-"
 puts "# frozen_string_literal: true"
-puts "# Generated from #{FILE}"
+puts "# Generated from #{SOURCE_URL}"
 puts "class MimeMagic"
 puts "  # @private"
 puts "  # :nodoc:"
